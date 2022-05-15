@@ -3,6 +3,9 @@
     {
       "id": 1,
       "name": "Leanne Graham",
+      "fullName": "",
+      "firstName": "Leanne",
+      "lastName": "Graham",
       "username": "Bret",
       "email": "Sincere@april.biz",
       "address": {
@@ -26,6 +29,9 @@
     {
       "id": 2,
       "name": "Ervin Howell",
+      "fullName": "",
+      "firstName": "Ervin",
+      "lastName": "Howell",
       "username": "Antonette",
       "email": "Shanna@melissa.tv",
       "address": {
@@ -42,6 +48,9 @@
       "website": "anastasia.net",
       "company": {
         "name": "Deckow-Crist",
+        "fullName": "",
+        "firstName": "",
+        "lastName": "",
         "catchPhrase": "Proactive didactic contingency",
         "bs": "synergize scalable supply-chains"
       }
@@ -49,6 +58,9 @@
     {
       "id": 3,
       "name": "Clementine Bauch",
+      "fullName": "",
+      "firstName": "",
+      "lastName": "",
       "username": "Samantha",
       "email": "Nathan@yesenia.net",
       "address": {
@@ -65,6 +77,9 @@
       "website": "ramiro.info",
       "company": {
         "name": "Romaguera-Jacobson",
+        "fullName": "",
+        "firstName": "",
+        "lastName": "",
         "catchPhrase": "Face to face bifurcated interface",
         "bs": "e-enable strategic applications"
       }
@@ -72,6 +87,9 @@
     {
       "id": 4,
       "name": "Patricia Lebsack",
+      "fullName": "",
+      "firstName": "",
+      "lastName": "",
       "username": "Karianne",
       "email": "Julianne.OConner@kory.org",
       "address": {
@@ -88,6 +106,9 @@
       "website": "kale.biz",
       "company": {
         "name": "Robel-Corkery",
+        "fullName": "",
+        "firstName": "",
+        "lastName": "",
         "catchPhrase": "Multi-tiered zero tolerance productivity",
         "bs": "transition cutting-edge web services"
       }
@@ -95,6 +116,9 @@
     {
       "id": 5,
       "name": "Chelsey Dietrich",
+      "fullName": "",
+      "firstName": "",
+      "lastName": "",
       "username": "Kamren",
       "email": "Lucio_Hettinger@annie.ca",
       "address": {
@@ -111,6 +135,9 @@
       "website": "demarco.info",
       "company": {
         "name": "Keebler LLC",
+        "fullName": "",
+        "firstName": "",
+        "lastName": "",
         "catchPhrase": "User-centric fault-tolerant solution",
         "bs": "revolutionize end-to-end systems"
       }
@@ -118,6 +145,9 @@
     {
       "id": 6,
       "name": "Mrs. Dennis Schulist",
+      "fullName": "",
+      "firstName": "",
+      "lastName": "",
       "username": "Leopoldo_Corkery",
       "email": "Karley_Dach@jasper.info",
       "address": {
@@ -134,6 +164,9 @@
       "website": "ola.org",
       "company": {
         "name": "Considine-Lockman",
+        "fullName": "",
+        "firstName": "",
+        "lastName": "",
         "catchPhrase": "Synchronised bottom-line interface",
         "bs": "e-enable innovative applications"
       }
@@ -141,6 +174,9 @@
     {
       "id": 7,
       "name": "Kurtis Weissnat",
+      "fullName": "",
+      "firstName": "",
+      "lastName": "",
       "username": "Elwyn.Skiles",
       "email": "Telly.Hoeger@billy.biz",
       "address": {
@@ -157,6 +193,9 @@
       "website": "elvis.io",
       "company": {
         "name": "Johns Group",
+        "fullName": "",
+        "firstName": "",
+        "lastName": "",
         "catchPhrase": "Configurable multimedia task-force",
         "bs": "generate enterprise e-tailers"
       }
@@ -164,6 +203,9 @@
     {
       "id": 8,
       "name": "Nicholas Runolfsdottir V",
+      "fullName": "",
+      "firstName": "",
+      "lastName": "",
       "username": "Maxime_Nienow",
       "email": "Sherwood@rosamond.me",
       "address": {
@@ -180,6 +222,9 @@
       "website": "jacynthe.com",
       "company": {
         "name": "Abernathy Group",
+        "fullName": "",
+        "firstName": "",
+        "lastName": "",
         "catchPhrase": "Implemented secondary concept",
         "bs": "e-enable extensible e-tailers"
       }
@@ -187,6 +232,9 @@
     {
       "id": 9,
       "name": "Glenna Reichert",
+      "fullName": "",
+      "firstName": "",
+      "lastName": "",
       "username": "Delphine",
       "email": "Chaim_McDermott@dana.io",
       "address": {
@@ -203,6 +251,9 @@
       "website": "conrad.com",
       "company": {
         "name": "Yost and Sons",
+        "fullName": "",
+        "firstName": "",
+        "lastName": "",
         "catchPhrase": "Switchable contextually-based project",
         "bs": "aggregate real-time technologies"
       }
@@ -210,6 +261,9 @@
     {
       "id": 10,
       "name": "Clementina DuBuque",
+      "fullName": "",
+      "firstName": "",
+      "lastName": "",
       "username": "Moriah.Stanton",
       "email": "Rey.Padberg@karina.biz",
       "address": {
@@ -226,6 +280,9 @@
       "website": "ambrose.net",
       "company": {
         "name": "Hoeger LLC",
+        "fullName": "",
+        "firstName": "",
+        "lastName": "",
         "catchPhrase": "Centralized empowering task-force",
         "bs": "target end-to-end models"
       }

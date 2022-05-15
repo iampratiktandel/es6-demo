@@ -1,20 +1,23 @@
 {
-  let userList = [];
+  var userList = [];
   /** fetch data from api (https://jsonplaceholder.typicode.com/users)*/
-  fetch('https://jsonplaceholder.typicode.com/users')
-  .then(response => response.json())
-  .then((data) => {
-    userList = data;
-    generateTableRows(userList);
-  });
-
-  /** fetch data from json-server (http://localhost:3000/users)*/
-  // fetch('http://localhost:3000/users')
+  // fetch('https://jsonplaceholder.typicode.com/users')
   // .then(response => response.json())
   // .then((data) => {
   //   userList = data;
   //   generateTableRows(userList);
   // });
+
+  /** fetch data from json-server (http://localhost:3000/users)*/
+  fetch('http://localhost:3000/users')
+  .then(response => response.json())
+  .then((data) => {
+    userList = data.map((item) => {
+      item.fullName = `${item.firstName} ${item.lastName}`;
+      return item;
+    });
+    generateTableRows(userList);
+  });
 }
 
 /**
@@ -41,4 +44,23 @@ function generateTableRows(data) {
     }
     userTableBody.appendChild(tableRow); /** append created table row to tbody */
   });
+}
+
+function filterUser() {
+  const userTableBody = document.querySelector('#user-table-body'); /** get user tbody */
+  const searchTerm = document.querySelector('#search-box');
+  userTableBody.textContent = '';
+  let filteredData = [];
+
+  // if (searchTerm.value !== '') {
+  //   filteredData = userList.filter((item) => {
+  //     return item.username.toLowerCase() === searchTerm.value.toLowerCase();
+  //   });
+  // } else {
+  //   filteredData = userList;
+  // }
+
+  filteredData = searchTerm.value !== '' ? userList.filter(item => item.name.toLowerCase().includes(searchTerm.value.toLowerCase())) : userList;
+  
+  generateTableRows(filteredData);
 }
