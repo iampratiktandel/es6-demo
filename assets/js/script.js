@@ -1,25 +1,35 @@
-{
-  var userList = [];
-  /** fetch data from api (https://jsonplaceholder.typicode.com/users)*/
-  // fetch('https://jsonplaceholder.typicode.com/users')
-  // .then(response => response.json())
-  // .then((data) => {
-  //   userList = data;
-  //   generateTableRows(userList);
-  // });
+const userList = [
+  {
+    name: 'Pratik',
+    email: 'pratik.tandel@1rivet.com',
+    phone: '999343241',
+    website: 'pratiktandel.in',
+    role: 'Developer'
+  },
+  {
+    name: 'Shivam',
+    email: 'shivam.singh@1rivet.com',
+    phone: '999343241',
+    website: 'shivamsingh.in',
+    role: 'Developer'
+  },
+  {
+    name: 'Hiren',  
+    email: 'hiren.tandel@1rivet.com',
+    phone: '999343241',
+    website: 'hirentandel.in',
+    role: 'Developer'
+  },
+  {
+    name: 'Mitul',
+    email: 'mitul.patel@1rivet.com',
+    phone: '999343241',
+    website: 'mitulpatel.in',
+    role: 'Developer'
+  },
+];
 
-  /** fetch data from json-server (http://localhost:3000/users)*/
-  fetch('http://localhost:3000/users')
-  .then(response => response.json())
-  .then((data) => {
-    userList = data.map((item) => {
-      item.fullName = `${item.firstName} ${item.lastName}`;
-      return item;
-    });
-    generateTableRows(userList);
-  });
-}
-
+generateTableRows(userList);
 /**
  * generate table rows from data
  * @param data data array
@@ -32,14 +42,12 @@ function generateTableRows(data) {
     const tableRow = document.createElement('tr'); /** create tr element */
     /** loop data item and create table columns */
     for (const key in user) {
-      if (Object.hasOwnProperty.call(user, key)) {
-        if (['name', 'email', 'phone', 'website'].includes(key)) {
-          const element = user[key]; /** get item from object */
-          const tableCol = document.createElement('td'); /** create td element */
-          tableCol.textContent = element; /** set value in table column */
+      if (['name', 'email', 'phone', 'website'].includes(key)) {
+        const element = user[key]; /** get item from object */
+        const tableCol = document.createElement('td'); /** create td element */
+        tableCol.textContent = element; /** set value in table column */
   
-          tableRow.appendChild(tableCol); /** append created table column to table row */
-        }
+        tableRow.appendChild(tableCol); /** append created table column to table row */
       }
     }
     userTableBody.appendChild(tableRow); /** append created table row to tbody */
@@ -49,18 +57,35 @@ function generateTableRows(data) {
 function filterUser() {
   const userTableBody = document.querySelector('#user-table-body'); /** get user tbody */
   const searchTerm = document.querySelector('#search-box');
+  const noRecordDiv = document.querySelector('.no-records');
+  const userTable = document.querySelector('#user-table');
   userTableBody.textContent = '';
   let filteredData = [];
 
   // if (searchTerm.value !== '') {
   //   filteredData = userList.filter((item) => {
-  //     return item.username.toLowerCase() === searchTerm.value.toLowerCase();
+  //     return item.name.toLowerCase() === searchTerm.value.toLowerCase();
   //   });
   // } else {
   //   filteredData = userList;
   // }
 
-  filteredData = searchTerm.value !== '' ? userList.filter(item => item.name.toLowerCase().includes(searchTerm.value.toLowerCase())) : userList;
+  filteredData = searchTerm.value ? userList.filter(item => item.name.toLowerCase().includes(searchTerm.value.toLowerCase())) : userList;
   
+  if (!filteredData.length) {
+    userTable.classList.add(['d-none']);
+    noRecordDiv.classList.remove(['d-none']);
+  } else {
+    userTable.classList.remove(['d-none']);
+    noRecordDiv.classList.add(['d-none']);
+  }
   generateTableRows(filteredData);
+}
+
+function onKeyUp(event) {
+  console.log(event);
+}
+
+function onScroll(event) {
+  console.log(event);
 }

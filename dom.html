@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6 Demo</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body onscroll="onScroll(event)">
+  <main>
+    <div>
+      <p>filter</p>
+      <input type="search" name="" id="search-box" onkeyup="onKeyUp(event)">
+      <button type="button" onclick="filterUser()">Search User</button>
+    <table id="user-table">
+      <thead>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Website</th>
+      </thead>
+      <tbody id="user-table-body">
+
+      </tbody>
+      <div>
+      </div>
+    </table>
+    <div class="no-records d-none">No records found</div>
+  </main>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
