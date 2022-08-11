@@ -89,3 +89,18 @@ function onKeyUp(event) {
 function onScroll(event) {
   console.log(event);
 }
+
+function onMouseOver(event) {
+  console.log(event);
+}
+
+const modal = document.querySelector('.modal');
+const close = document.querySelector('.close');
+
+function openModal() {
+  modal.classList.remove(['d-none']);
+}
+
+function closeModal() {
+  modal.classList.add(['d-none']);
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,27 +8,44 @@
   <title>ES6 Demo</title>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body onscroll="onScroll(event)">
   <main>
     <div>
       <p>filter</p>
       <input type="search" name="" id="search-box" onkeyup="onKeyUp(event)">
       <button type="button" onclick="filterUser()">Search User</button>
-    <table id="user-table">
-      <thead>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Website</th>
-      </thead>
-      <tbody id="user-table-body">
+      <table id="user-table">
+        <thead>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Website</th>
+        </thead>
+        <tbody id="user-table-body" onmouseover="onMouseOver(event)">
 
-      </tbody>
-      <div>
+        </tbody>
+        <div>
+        </div>
+      </table>
+      <div class="no-records d-none">No records found</div>
+
+      <div class="add-user">
+        <button onclick="openModal()">Add User</button>
       </div>
-    </table>
-    <div class="no-records d-none">No records found</div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal d-none">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <div>User Form</div>
+        </div>
+
+      </div>
   </main>
   <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
