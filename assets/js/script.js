@@ -70,7 +70,7 @@ function filterUser() {
   //   filteredData = userList;
   // }
 
-  filteredData = searchTerm.value ? userList.filter(item => item.name.toLowerCase().includes(searchTerm.value.toLowerCase())) : userList;
+  filteredData = searchTerm.value !== '' ? userList.filter(item => item.name.toLowerCase().includes(searchTerm.value.toLowerCase())) : userList;
   
   if (!filteredData.length) {
     userTable.classList.add(['d-none']);
